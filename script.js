@@ -85,28 +85,30 @@
 //  console.log("é nececssario alterar o número de itens ") } 
 // exercicio de fixação 
 
-const filme = ["o homem que copiava","2003","jorge furtado"]
-const elenco = ["lazaro ramos","leandro leal","pedro cardoso"]
+// const filme = ["o homem que copiava","2003","jorge furtado"]
+// const elenco = ["lazaro ramos","leandro leal","pedro cardoso"]
 
-// for(let i = 0;i<filme.length;i++){
-//   console.log(`${filme[0]} do ano ${filme[1]} dirigido por ${filme[2]}`)
-//   for(let j = 0;j<filme[i];j++){
-//     console.log(`tem no elenco:${elenco}`)
-// }
-// }
+const filme = [
+  {
+    titulo: 'O Auto da Compadecida',
+    ano: 2000,
+    diretor: 'Guel Arraes',
+    elenco: [
+    'Selton Mello',
+    'Mateus Nachtergaele',
+    'Marco Nanini',
+    'Fernanda Montenegro',
+     ],
+   }]
 
-// exercicio 2 troca do laço externo por for in 
+  for (let i in filme){
+    console.log(`${filme[i].titulo}, de ${filme[i].ano},dirigido por ${filme[i].diretor}`);
 
-for(let i in filme){
-  console.log(`${filme[0]} do ano ${filme[1]} dirigido por ${filme[2]}`)
-   for (let z in elenco){
-     console.log(`tem no elenco:${elenco}`)
+      for (let atores of filme){
+        console.log(`Tem no elenco:${filme.elenco}`)
+      }
   }
-}
-// exericio 3 troque o laço por interno por for of
-for(let i in filme){
-  console.log(`${filme[0]} do ano ${filme[1]} dirigido por ${filme[2]}`)
-   for (let z of elenco){
-     console.log(`tem no elenco:${elenco}`)
-  }
-}
+  // for (let i in filme){
+  //   console.log(`${filme[i].titulo}, de ${filme[i].ano}, dirigido por ${filme[i].diretor})
+  //     {
+   
